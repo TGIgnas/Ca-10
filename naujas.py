@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect("duomenu_baze.db")
+conn = sqlite3.connect("duomenu_bazes.db")
 c = conn.cursor()
 
 with conn:
@@ -20,7 +20,7 @@ with conn:
     print(c.fetchall())
 
 with conn:
-    c.execute("UPDATE duomenu_baze SET pavadinimas ='Python programavimas' WHERE pavadinimas = 'Python")
+    c.execute("UPDATE duomenu_bazes SET pavadinimas ='Python programavimas' WHERE pavadinimas = 'Python")
 
 with conn:
     c.execute("DELETE FROM paskaitos value WHERE destytojas = 'Tomas'")
